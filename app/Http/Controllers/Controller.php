@@ -18,6 +18,6 @@ class Controller extends BaseController
 
     //return API failure call
     protected static function returnFailure($message) {
-        return array('success' => false, 'reason' => $message);
+        return response(array('success' => false, 'reason' => $message), 400);
     }
 }
